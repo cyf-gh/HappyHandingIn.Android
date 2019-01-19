@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto" > 
+  <item 
+    android:id="@+id/id_action_btn_Add"
+    android:title="@string/str_cn_text_add"
+    android:src="@drawable/ic_attachment_black_48dp"
+    app:showAsAction="never"/>
+  <item 
+    android:id="@+id/id_action_btn_remove_all"
+    android:title="清除所有图片"
+    app:showAsAction="never"/>
+  <item 
+    android:id="@+id/id_action_btn_appinfo"
+    android:title="软件版本"
+    app:showAsAction="never"/>
+</menu> 

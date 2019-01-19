@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="Base.AppTheme" parent="Theme.Design.Light">
+
+        <!--去掉原来的ActionBar-->
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- API Level 22 编译要去点android -->
+        <item name="windowNoTitle">true</item>
+ 
+        <!-- Actionbar color -->
+    </style>
+        
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.AppTheme">
+ 
+     <!-- 这个属性之所以注释掉是因为它只能在5.0之后使用，所以一定要定义它的话需要在/res/valuse-v21/sytles.xml中进行定义 -->
+    <!-- <item name="android:navigationBarColor">@color/accent_material_light</item> -->
+    </style>
+</resources>

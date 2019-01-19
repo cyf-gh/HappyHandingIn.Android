@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical">
+    <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/id_drawerlayout" android:layout_width="match_parent" android:layout_height="match_parent" android:clickable="true">
+        <!--主界面剩余的布局将在以下进行-->
+        <android.support.design.widget.CoordinatorLayout android:id="@+id/id_cl_main" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical">
+                <android.support.v7.widget.Toolbar android:id="@+id/id_toolbar" android:layout_width="match_parent" android:background="?attr/colorPrimary" app:title="快乐交作业" android:layout_height="?attr/actionBarSize" android:elevation="4dp" />
+                <GridView android:layout_width="match_parent" android:layout_height="match_parent" android:columnWidth="90dp" android:numColumns="auto_fit" android:verticalSpacing="10dp" android:horizontalSpacing="10dp" android:stretchMode="columnWidth" android:gravity="center" android:id="@+id/id_rl_main"></GridView>
+            </LinearLayout>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="center" android:gravity="center" android:id="@+id/id_tv_info" android:textSize="@dimen/abc_text_size_title_material" android:text="你添加的图片将出现在这里" android:singleLine="false" android:maxLines="10" />
+            <ProgressBar android:id="@+id/id_pb" style="@android:style/Widget.Material.Light.ProgressBar.Large.Inverse" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <android.support.design.widget.FloatingActionButton android:id="@+id/id_fab_send" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_gravity="bottom|right" android:layout_margin="16dp" app:borderWidth="0dp" android:src="@drawable/ic_send_black_48dp" android:elevation="35dp" />
+        </android.support.design.widget.CoordinatorLayout>
+        <!--抽屉拉开后的布局,即ListView所在的布局-->
+        <LinearLayout android:id="@+id/id_ll_d" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="10dp" android:background="@android:color/white" android:layout_gravity="start" android:clickable="true">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dip" android:orientation="horizontal">
+                <TextView android:layout_weight="4" android:textSize="@dimen/abc_text_size_title_material" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="设置" />
+                <Button android:layout_weight="1" android:id="@+id/id_btn_refresh" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_gravity="right" android:text="更新信息" />
+            </LinearLayout>
+            <android.support.design.widget.TextInputLayout android:layout_width="match_parent" android:layout_marginTop="20dp" android:layout_height="wrap_content">
+                <AutoCompleteTextView android:hint="@string/str_cn_static_foldername_hint" android:id="@+id/id_actv_foldername" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dip" android:singleLine="true" android:imeOptions="actionDone" android:inputType="text"/>
+            </android.support.design.widget.TextInputLayout>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dip" android:text="@string/str_cn_static_server_hint" />
+            <Spinner android:id="@+id/id_spinner_server" android:layout_width="match_parent" android:layout_height="wrap_content" android:prompt="@string/str_cn_static_server_hint" />
+            <!-- -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dip" android:text="@string/str_cn_static_work_hint" />
+            <Spinner android:id="@+id/id_spinner_work" android:layout_width="match_parent" android:layout_height="wrap_content" android:prompt="@string/str_cn_static_work_hint" />
+            <!-- -->
+        </LinearLayout>
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>
